@@ -1,0 +1,8 @@
+// The program input for transcript_1g2cpw/src/main.leo
+[issue_transcript]
+owner: aleo1g2cpwwktyll47u22dy3uajvcdhlsum49zmhn4e69x5fypyzccu9stw65f8;
+issuer: aleo1fjzaae5tj4xf93hq5f6y7p2cmv2cwp0nypcc7979yrgutmczhsgsnky9af;
+total_gpa: 365;
+major_gpa: 400;
+graduated: true;
+graduation_timestamp: 1695499890344;
