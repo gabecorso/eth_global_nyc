@@ -37,7 +37,7 @@ function App() {
   async function deploy() {
     setDeploying(true);
     try {
-      const result = await aleoWorker.deployProgram(helloworld_program);
+      const result = await aleoWorker.deployProgram(transcript_program);
       console.log("Transaction:")
       console.log("https://explorer.hamp.app/transaction?id=" + result)
       alert("Transaction ID: " + result);
