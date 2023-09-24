@@ -20,6 +20,7 @@ program transcript_1g2cpw.aleo {
 
     mapping check_total_gpa: field => u16;
     mapping is_graduated: field => bool;
+    mapping transcripts: address => Transcript;
 
     // The `issue_transcript` function initializes a new transcript record from the issuing authority to
     // the owner account, which is the student in question
@@ -34,8 +35,11 @@ program transcript_1g2cpw.aleo {
         };
     }
 
+
+
     transition check_is_graduated(owner: address) -> bool {
-        return true;
+        let transcript: Transcript = Mapping::get(transcripts, owner);
+        return transcript.graduated;
     }
 
 
