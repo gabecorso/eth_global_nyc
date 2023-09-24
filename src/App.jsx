@@ -62,9 +62,6 @@ function App() {
       </div>
       <h1>OtterTranscript <br/> (powered by Aleo and React)</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
         <p>
           <button onClick={generateAccount}>
             {account
