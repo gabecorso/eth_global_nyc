@@ -1,4 +1,12 @@
-# React + Aleo + Leo
+# Project Description
+This project uses Aleo's Layer 1 solution to provide students and graduates with ownership over their academic transcripts. Issuing authorities like academic institutions can create and issue transcripts as Leo records to owner addresses which are students. These records can then be queried for accuracy in regards to features like total GPA, major GPA, and graduation status and timestamp.
+
+## How it's Made
+I leveraged Aleo's Layer 1 solution to make a dApp that implements transcripts on the blockchain. A core issue with transcripts being on-chain is the sensitivity of the information contained within. By using the privacy options Aleo is built from the ground up to support you can solve for the issue of having ownership of your own transcript with an immutable record of its changes and status while not sacrificing privacy by having the entirety of your transcript public. Interested parties like hiring authorities or other academic institutions can verify the authenticity of your transcript, your degree, and your performance in specific classes with zero knowledge proofs. I used the Aleo javascript SDK and the create aleo app SDK for creating a simple front end to interact with this application. I used Midjourney to help me create a simple logo as well as Material UI to supplement my front end.
+
+
+
+## React + Aleo + Leo
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/AleoHQ/sdk/tree/testnet3/create-aleo-app/template-react)
 
@@ -22,7 +30,7 @@ Your app should be running on http://localhost:5173/
 
 ### Build Leo program
 
-1. Copy the `helloworld/.env.example` to `helloworld/.env` (this will be ignored
+1. Copy the `transcript_1g2cpw/.env.example` to `transcript_1g2cpw/.env` (this will be ignored
    by Git):
 
    ```bash
@@ -35,7 +43,7 @@ Your app should be running on http://localhost:5173/
 
 3. Follow instructions to install Leo here: https://github.com/AleoHQ/leo
 
-4. You can edit `helloworld/src/main.leo` and run `leo run` to compile and update the
+4. You can edit `transcript_1g2cpw/src/main.leo` and run `leo run` to compile and update the
    Aleo instructions under `build` which are loaded by the web app.
 
 ## Deploy program from web app
@@ -47,7 +55,7 @@ Your app should be running on http://localhost:5173/
 Information on generating a private key, seeding a wallet with funds, and finding a spendable record can be found here
 if you are unfamiliar: https://developer.aleo.org/testnet/getting_started/deploy_execute_demo
 
-Aleo programs deployed require unique names, make sure to edit the program's name to something unique in `helloworld/src/main.leo`, `helloworld/program.json`, rename `helloworld/inputs/helloworld.in` and rebuild.
+Aleo programs deployed require unique names, make sure to edit the program's name to something unique in `transcript_1g2cpw/src/main.leo`, `helloworld/program.json`, rename `helloworld/inputs/helloworld.in` and rebuild.
 
 1. In the `worker.js` file modify the privateKey to be an account with available
    funds
