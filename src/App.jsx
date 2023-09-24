@@ -8,7 +8,7 @@ import { AleoWorker } from "./workers/AleoWorker.js";
 
 const aleoWorker = AleoWorker();
 function App() {
-  const [count, setCount] = useState(0);
+  const [graduated, setGraduated] = useState(null)
   const [account, setAccount] = useState(null);
   const [executing, setExecuting] = useState(false);
   const [deploying, setDeploying] = useState(false);
@@ -29,6 +29,20 @@ function App() {
     setExecuting(false);
 
     setResult(result);
+
+    alert(JSON.stringify(result));
+  }
+
+  async function check_graduation() {
+    setExecuting(true);
+    const result = await aleoWorker.localProgramExecution(
+        transcript_program,
+        "check_is_graduated",
+        ["aleo1g2cpwwktyll47u22dy3uajvcdhlsum49zmhn4e69x5fypyzccu9stw65f8"],
+    );
+    setExecuting(false);
+
+    setGraduated(result);
 
     alert(JSON.stringify(result));
   }
@@ -76,9 +90,25 @@ function App() {
               : `Issue a Transcript`}
           </button>
         </p>
+
+
         <p>
           Result of transcript: {result}
         </p>
+
+
+        <p>
+          <button disabled={executing} onClick={check_graduation}>
+            {executing
+                ? `Executing...check console for details...`
+                : `Check is Graduated`}
+          </button>
+        </p>
+
+        <p>
+          Is graduated: {result}
+        </p>
+
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
