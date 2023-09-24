@@ -3,7 +3,6 @@ import reactLogo from "./assets/react.svg";
 import aleoLogo from "./assets/aleo.svg";
 import otterTranscriptLogo from "./assets/otterTranscriptLogo.png"
 import "./App.css";
-import helloworld_program from "../helloworld/build/main.aleo?raw";
 import transcript_program from "../transcript_1g2cpw/build/main.aleo?raw"
 import { AleoWorker } from "./workers/AleoWorker.js";
 
